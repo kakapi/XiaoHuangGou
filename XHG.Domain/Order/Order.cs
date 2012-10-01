@@ -8,7 +8,7 @@ namespace XHG.Domain.Order
     /// <summary>
     /// 订单类.
     /// </summary>
- public  class Order
+ public  class Order:DomainBase<Order>
     {
      public Guid OrderId { get; set; }
      public Member.Member Member { get; set; }
@@ -25,6 +25,10 @@ namespace XHG.Domain.Order
              }
              return amount;
          }
+     }
+     public void Save()
+     {
+         Reposi.Save(this);
      }
     }
 }

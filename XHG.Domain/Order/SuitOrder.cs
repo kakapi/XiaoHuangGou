@@ -10,9 +10,9 @@ namespace XHG.Domain.Order
     /// </summary>
     public class SuitOrder : Order
     {
-        public int Type1Count { get; set; }
-        public int Type2Count { get; set; }
-        public bool IsFreezed { get; set; }
-        public DateTime UnfreezeTime { get; set; }
+        public int MeatCount { get; set; }
+        public int VegeTableCoount { get; set; }
+        public DayOfWeek DistributinonTime { get; set; }
+
     }
 }
